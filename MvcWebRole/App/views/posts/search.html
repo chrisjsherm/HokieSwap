@@ -1,0 +1,51 @@
+﻿<div class="row" data-bind="">
+    <div class="large-12 columns">
+        <input type="text" data-bind="value: searchString, valueUpdate: 'afterkeydown'" />
+    </div>
+</div>
+
+<div class="row collapse">
+    <div class="large-12 columns">
+        <table class="bumpedUp">
+            <tbody>
+                <tr>
+                    <td>
+                        <a data-bind="fastlink: '/#/posts/filter-by-type?filter=advertisements&type=1'">
+                            <span>Advertisements</span>
+                            <span class="right">&#62</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a data-bind="fastlink: '/#/posts/filter-by-type?filter=requests&type=2'">
+                            <span>Requests</span>
+                            <span class="right">&#62</span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="bumped">
+            <thead>
+                <tr>
+                    <th>Categories</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--ko foreach: categories -->
+                <tr>
+                    <td>
+                        <a data-bind="fastlink: '/#/posts/filter-by-category?filter='
+                            + encodeURIComponent(Name().toLowerCase()) + '&categoryid=' + Id">
+                            <span data-bind="text: Name"></span>
+                            <span class="right">&#62</span>
+                        </a>
+                    </td>
+                </tr>
+                <!--/ko-->
+            </tbody>
+        </table>
+    </div>
+</div>

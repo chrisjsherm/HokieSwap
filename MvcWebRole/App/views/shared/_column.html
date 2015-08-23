@@ -1,0 +1,27 @@
+﻿<div class="large-12 columns postBuffer">
+    <!-- ko foreach: Photos -->
+    <img class="img-frame" data-bind="attr: { src: Source }" />
+    <!--/ko-->
+    <a data-bind="fastbutton: $root.selectItem">
+        <div data-bind="css: { defaultPanel: Type === 1, requestPanel: Type === 2 }">
+            <p class="text-center" data-bind="text: Title"></p>
+        </div>
+    </a>
+
+    <div class="hide detailPanel" data-bind="attr: { id: Id }">
+        <p class="pre" data-bind="text: Description"></p>
+
+        <p class="zeroMargin"><strong>Contact information</strong></p>
+        <ul class="zeroMargin">
+            <li><a data-bind="attr: { href: 'mailto:' + Email + '?subject=Hokie Swap: ' + Title() }, text: Email"></a></li>
+            <li data-bind="visible: Phone(), text: Phone()"></li>
+        </ul>
+    </div>
+
+    <a data-bind="fastbutton: $root.selectItem">
+        <div class="teaserPanel">
+            <span class="left" data-bind="text: moment(DateTimeCreated).fromNow()"></span>
+            <span class="right" data-bind="text: Price ? '$' + Price : ''"></span>
+        </div>
+    </a>
+</div>

@@ -1,0 +1,9 @@
+﻿<nav class="icon-bar">
+    <ul data-bind="foreach: router.navigationModel">
+        <li data-bind="css: { active: isActive }">
+            <a data-bind="fastlink: hash">
+                <i data-bind="attr: { class: icon }"></i>
+            </a>
+        </li>
+    </ul>
+</nav>

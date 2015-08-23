@@ -1,0 +1,25 @@
+﻿<section>
+    <!--ko compose: { model: router.activeItem, 
+            view: 'views/shared/_title-bar' } -->
+    <!--/ko-->
+</section>
+
+<section id="content" data-bind="router: { transition: 'scrollers', cacheViews: false }">
+</section>
+
+<section>
+    <!--ko compose: { view: 'shared/_icon-bar' } -->
+    <!--/ko-->
+</section>
+
+<div id="modalAlertWindow" class="medium reveal-modal viewBackground" data-options="closeOnBackgroundClick: false">
+    <!--ko compose: { view: 'information/terms' } -->
+    <!--/ko-->
+    <div class="row">
+        <div class="large-12 columns">
+            <span class="textButton button-close-reveal-modal">Accept</span>
+        </div>
+    </div>
+
+    <a class="close-reveal-modal">&#215;</a>
+</div>

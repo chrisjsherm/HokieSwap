@@ -1,0 +1,77 @@
+﻿<div class="row" data-bind="if: error !== undefined">
+    <div class="large-12 columns">
+        <label class="error" data-bind="text: error"></label>
+    </div>
+</div>
+
+<div class="row collapse">
+    <div class="large-12 columns">
+
+        <table class="bumped">
+            <thead>
+                <tr>
+                    <th>Active Posts</th>
+                    <th class="right" data-bind="fastbutton: toggleEditItems">
+                        <i data-bind="css: editItems() ? 'fi-x' : 'fi-trash', visible: items().length > 0"></i>
+                    </th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: items, visible: items().length > 0">
+                <tr>
+                    <td colspan="2">
+                        <a data-bind="fastbutton: $root.selectItem">
+                            <span data-bind="text: Title"></span>
+                            <span class="right" data-bind="ifnot: $root.editItems">&#62</span>
+                            <span class="right" data-bind="if: $root.editItems">
+                                <i class="fi-trash"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody data-bind="visible: items().length === 0">
+                <tr>
+                    <td colspan="2">
+                        <a><span>No records</span></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row collapse">
+    <div class="large-12 columns">
+
+        <table class="bumped">
+            <thead>
+                <tr>
+                    <th>Expired Posts</th>
+                    <th class="right" data-bind="fastbutton: toggleEditItems">
+                        <i data-bind="css: editItems() ? 'fi-x' : 'fi-trash', visible: expiredItems().length > 0"></i>
+                    </th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: expiredItems, visible: expiredItems().length > 0">
+                <tr>
+                    <td colspan="2">
+                        <a data-bind="click: $root.renewItem">
+                            <span data-bind="text: Title"></span>
+                            <span class="right" data-bind="ifnot: $root.editItems">Renew</span>
+                            <span class="right" data-bind="if: $root.editItems">
+                                <i class="fi-trash"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody data-bind="visible: expiredItems().length === 0">
+                <tr>
+                    <td colspan="2">
+                        <a><span>No records</span></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

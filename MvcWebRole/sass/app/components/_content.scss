@@ -1,0 +1,17 @@
+html {
+	background-color: #E0E0E0;
+	background-image: url("images/kindajean.png");
+}
+
+#content {
+	margin: 0 0 ($iconbar-height + emCalc(15px)) 0;
+}
+
+.viewBackground {
+	background-color: $post-panel-bg;
+	padding-bottom: emCalc(20px);
+}
+
+.pre {
+	white-space: pre-wrap;
+}

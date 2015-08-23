@@ -1,0 +1,52 @@
+﻿<div class="row hide-for-small">
+    <div class="large-3 columns">
+        <div class="row" data-bind="foreach: columnOneItems">
+            <!-- ko compose: { view: 'shared/_column' } -->
+            <!--/ko-->
+        </div>
+    </div>
+
+    <div class="large-3 columns">
+        <div class="row" data-bind="foreach: columnTwoItems">
+            <!-- ko compose: { view: 'shared/_column' } -->
+            <!--/ko-->
+        </div>
+    </div>
+
+    <div class="large-3 columns">
+        <div class="row" data-bind="foreach: columnThreeItems">
+            <!-- ko compose: { view: 'shared/_column' } -->
+            <!--/ko-->
+        </div>
+    </div>
+
+    <div class="large-3 columns">
+        <div class="row" data-bind="foreach: columnFourItems">
+            <!-- ko compose: { view: 'shared/_column' } -->
+            <!--/ko-->
+        </div>
+    </div>
+</div>
+
+<div class="row show-for-small">
+    <div class="small-12 columns">
+        <div class="row" data-bind="foreach: items">
+            <!-- ko compose: { view: 'shared/_column' } -->
+            <!--/ko-->
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <label class="error" data-bind="text: error"></label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <h3 class="text-center" data-bind="if: noItemsToShow">Nothing here!</h3>
+    </div>
+</div>
+
+<div data-bind="scroll: true, scrollOptions: { loadFunc: getMoreItems, offset: 125 }"></div>

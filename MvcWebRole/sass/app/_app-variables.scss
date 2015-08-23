@@ -1,0 +1,33 @@
+$ad-border: #408066;
+$request-border: #1C699C;
+$ad-color: #5FAE8E;
+$request-color: #3498DB;
+$post-font-color: #F5F5F5;
+$post-panel-bg: whitesmoke;
+$detail-bg: #888;
+
+//
+// Icon bar variables
+//
+
+// Color
+$iconbar-bg: #5C5E5E !default;
+$iconbar-border-color: #B5B3B1;
+
+// Height and sizing
+$iconbar-height: emCalc(40px);
+$iconbar-font-size: emCalc(25px);
+
+//
+// Title bar variables
+//
+
+// Height and sizing
+$titlebar-height: emCalc(35px);
+
+// Color
+$titlebar-bg: #FF6600 !default;
+$titlebar-font-color: #FFF;
+
+// Sizing
+$titlebar-font-size: emCalc(30px);

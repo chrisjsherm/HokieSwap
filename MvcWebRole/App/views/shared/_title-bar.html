@@ -1,0 +1,16 @@
+﻿<nav class="title-bar">
+    <ul>
+        <li class="lefty" data-bind="fastback: showBackButton">
+            <i class="fi-arrow-left" data-bind="css: { active: showBackButton }"></i>
+        </li>
+
+        <li>
+            <h1 data-bind="text: title"></h1>
+        </li>
+
+        <li class="righty">
+            <i class="fi-info" 
+                data-bind="css: { active: undefined !== showInfoButton }, fastlink: '/#/information/index'"></i>
+        </li>
+    </ul>
+</nav>

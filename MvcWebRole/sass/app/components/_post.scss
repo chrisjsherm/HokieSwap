@@ -1,0 +1,54 @@
+.postPanel {
+	@extend .panel;
+	border: none;
+	background-color: $post-panel-bg;
+	margin: 0;
+	padding: 0.75em;
+	font-size: 1.1em;
+}
+
+.requestPanel {
+	@extend .postPanel;
+	border-top: thick solid $request-color;
+}
+
+.detailPanel {
+	@extend .postPanel;
+	background-color: $detail-bg;
+	font-size: 1em;
+
+	a, li {
+		color: $post-font-color;
+	}
+
+	h5, hr, p {
+		color: $post-font-color;
+		margin-bottom: 0.5em;
+	}
+
+	.zeroMargin {
+		margin-bottom: 0;
+	}
+}
+
+.defaultPanel {
+	@extend .postPanel;
+	border-top: thick solid $ad-color;
+}
+
+.teaserPanel {
+	@extend .postPanel;
+	border-top: thin solid $secondary-color;
+	color: #333;
+	display: block;
+	font-size: 0.8em;
+	padding-bottom: 1.75em;
+}
+
+.postBuffer {
+	margin-bottom: 1.25em;
+}
+
+.destroyPost {
+	background-color: lighten($alert-color, 30%);
+}

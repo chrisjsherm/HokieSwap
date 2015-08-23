@@ -1,0 +1,23 @@
+.close {
+	color: $alert-color;
+	cursor: pointer;
+	position: absolute;
+	top: emCalc(-10px);
+}
+
+.img-frame {
+	background: $panel-bg;
+	border-style: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.upload-preview {
+	width: emCalc(75px);
+}
+
+.upload-container {
+	position: relative;
+	margin-right: emCalc(10px);
+}

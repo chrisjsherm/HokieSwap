@@ -1,0 +1,7 @@
+.textButton {
+	border: emCalc(2px) solid $primary-color;
+	color: $primary-color;
+	display: inline-block;
+	font-size: 1.25em;
+	padding: emCalc(5px);
+}

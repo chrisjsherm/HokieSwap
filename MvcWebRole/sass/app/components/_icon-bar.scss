@@ -1,0 +1,43 @@
+.icon-bar {
+	border-style: none;
+	bottom: 0;
+	position: fixed;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	z-index: 999;
+
+	ul {
+		border: none;
+		display: table;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+
+	ul li {
+		background: $iconbar-bg;
+		border-style: none;
+		//border-left: $microformat-border-width $microformat-border-style $iconbar-border-color;
+		//border-top: $microformat-border-width $microformat-border-style $iconbar-border-color;
+		display: table-cell;
+		height: $iconbar-height;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+
+		a {
+			color: $titlebar-font-color;
+			display: block;
+		}
+
+		i {
+			font-size: $iconbar-font-size;
+		}
+	}
+
+	.active {
+		background-color: $titlebar-bg;
+		color: $titlebar-bg;
+	}
+}
